@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <tittle>Groot</tittle>
+        <style>
+            .join
+            {
+               background-color:white;
+               color: blue;
+               border-color:blue;
+               height: 35px;
+               width: 80px;    
+               border-radius:5%;
+               border:10%;
+               font-size:100%;
+            }
+        </style>
+        <style>
+            .subscribe
+            {
+               background-color:rgb(200, 0, 0);
+               color: white;
+               height: 35px;
+               width: 120px;    
+               border-radius:5%;
+               border:10%;
+               font-size:100%;
+               border:none;
+               cursor:pointer;
+            }
+        </style>
+        <style>
+            .gradient
+            {
+               background-image:linear-gradient(red,orange,yellow,green,blue,indigo,violet);
+               border-color:blue;
+               height: 35px;
+               width: 80px;    
+               border-radius:5%;
+               border:10%;
+               font-size:100%;
+               color:white;
+               cursor: pointer;
+            }
+        </style>
+        <style>
+            .buy
+            {
+                width:120px;
+                height:36px;
+                color:white;
+                background-color:black;
+                border-radius:10%;
+                border:10%;
+                border-color:rgb(109, 103, 103);
+            }
+        </style>
+    </head>
+    <body>
+        <p>This is Groot!</p>
+       
+        <button class="join" onclick="alert('Hello, thank you for joining groot world!');">
+            <!--This is used to make interactive-->
+            Join
+        </button>
+
+        <button class="subscribe">Subscribe</button>
+        <button class="gradient">LGBTQ</button>
+        <button class="buy" onclick="increment();">
+            Buy
+        </button>
+        <a href="webpage.html">
+            <button class="buy">Buy Vatsal</button>
+        </a>
+        <script>
+            let Quantity=0;
+           function increment()
+           {
+            Quantity=Quantity+1;
+            console.log(Quantity);
+           }
+        </script>
+    </body>
+</html>

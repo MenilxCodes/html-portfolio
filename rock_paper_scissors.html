@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>rockPapersScissors</title>
+    <style>
+        body
+        {
+            background-color:black;
+        }
+        button
+        {
+            height:80px;
+            width:80px;
+            border-radius:50%;
+            border-bottom: 9px;
+            border-top:9px;
+            background-color:rgb(97, 92, 92);
+            border-color:yellow;
+            color:cyan;
+        }
+        .text{
+            color:white;
+        }
+    </style>
+</head>
+<body>
+    <p class="text">
+        Shoot your choice!
+    </p>
+    <button onclick="choice='rock';result(choice,computerChoice());">
+        Rock
+    </button>
+
+    <button onclick="choice='paper';result(choice,computerChoice());">
+        Paper
+    </button>
+
+    <button onclick="choice='scissors';result(choice,computerChoice());">
+        Scissors
+    </button>
+
+    <script>
+        let choice='trash';
+        let res;
+        let computerchoice;
+        function computerChoice()
+        {
+            computerchoice=Math.floor(Math.random()*3);
+            if(computerchoice==0)
+        {
+            return 'rock';
+        }
+        else if(computerchoice==1)
+        {
+            return 'paper';
+        }
+        else{
+            return 'scissors';
+        }
+    }
+
+        function result(me,computer)
+        {
+            if(me==='rock')
+                {
+                    if(computer===me)
+                    res='tie';
+                    else if(computer==='scissors')
+                    res='win';
+                    else 
+                    res='lose';
+                }
+                if(me==='paper')
+                {
+                    if(computer===me)
+                    res='tie';
+                    else if(computer==='rock')
+                    res='win';
+                    else 
+                    res='lose';
+                }
+                if(me==='scissors')
+                {
+                    if(computer===me)
+                    res='tie';
+                    else if(computer==='paper')
+                    res='win';
+                    else 
+                    res='lose';
+                }
+            console.log(`You chose ${me} and computer chose ${computer}. You ${res}`);    
+        }
+    </script>
+</body>
+</html>
